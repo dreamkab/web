@@ -100,12 +100,6 @@ html {
     width: 260px;
 }
 
-.gradient-top {
-    position: relative; /* Устанавливаем относительное позиционирование для градиента */
-    z-index: 5; /* Устанавливаем z-index ниже, чем у заголовка и кнопки */
-    width: 100%;
-}
-
 .top-main-background {
     position: absolute;
     top: 0; /* Расположение от верхней границы */
@@ -115,14 +109,6 @@ html {
 }
 
 /* RECOMENDATIONS */
-.gradient-rec {
-    top: 808px;
-    position: absolute;
-    width: 1340px;
-    z-index: 1;
-    opacity: 0.4;
-}
-
 .rec-header {
     background: #09040a;
     font-size: 40px;
@@ -136,6 +122,18 @@ html {
     flex-grow: 1; /* Позволяем заголовку занимать доступное пространство */
 }
 
+.rec-desk {
+    text-align: center; /* Выравниваем текст по центру */
+    flex-grow: 1; /* Позволяем заголовку занимать доступное пространство */
+    font-size: 26px;
+    font-family: "Tektur", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color: #f8ebfd;
+    margin-top: 20px;
+}
+
 .recomendations {
     background: #09040a;
     display: flex;
@@ -145,6 +143,7 @@ html {
 
 /*BEAT SABER*/
 .beat-saber-box {
+    position: relative;
     display: inline-block;
     margin-left: 140px;
     width: 500px;
@@ -162,42 +161,41 @@ html {
     color: #99C5D6;
 }
 .ob-bs {
+    position: relative;
     font-size: 30px;
     font-family: "Tektur", serif;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
     z-index: 11;
-    top: 1170px; left: 150px;
-    position:absolute;
+    top: -130px;
+    width: 380px;
     color: #F6DEFF;
 }
 .bs-p{
+    position: relative;
     margin-right: 800px;
     font-family: "Tektur", serif;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
     z-index: 11;
-    top: 1240px; left: 150px;
-    position:absolute;
+    position: relative;
+    top: -122px;
+    width: 380px;
     color: #E3F8FF;
 }
 .bs-logo {
     width: 170px;
 }
-.bs-shad {
-    margin-left: 2px;
-    margin-top: 121px;
-    position: relative;
-    z-index: 10;
-    width: 400px;
-}
+
 .bs-img {
-    top: 1000px; left: 150px;
-    position:absolute;
     width: 400px;
+    height: 224.5px;
     margin-top: 15px;
+    background: linear-gradient(to bottom, transparent, #09040a), url(/images/recomendations/beatsaber_screenshot.png);
+    background-size: cover; /* или contain, в зависимости от вашего желания */
+    background-position: center; /* центрирование изображения */
 }
 
 /*JOB SIMULATOR*/
@@ -208,6 +206,7 @@ html {
 }
 .job-sim-logo-box {
     display: flex;
+    position: relative;
 }
 .job-sim-logo-box p {
     color: #C1E8A9;
@@ -227,8 +226,9 @@ html {
     font-weight: 100;
     font-style: normal;
     z-index: 11;
-    top: 1170px; left: 770px;
-    position:absolute;
+    position: relative;
+    top: -130px;
+    width: 380px;
     color: #F1FFDE;
 }
 .js-p {
@@ -237,26 +237,22 @@ html {
     font-weight: 100;
     font-style: normal;
     z-index: 11;
-    top: 1240px; left: 770px;
-    position:absolute;
+    position: relative;
+    top: -122px;
+    width: 380px;
     color: #E3F8FF;
     margin-right: 140px;
 }
 .js-logo {
     width: 170px;
 }
-.js-shad {
-    margin-left: 2px;
-    margin-top: 121px;
-    position: relative;
-    z-index: 10;
-    width: 400px;
-}
 .js-img {
-    top: 1000px; left: 770px;
-    position:absolute;
     width: 400px;
+    height: 224.5px;
     margin-top: 15px;
+    background: linear-gradient(to bottom, transparent, #09040a), url(/images/recomendations/job_sim_screenshot.png);
+    background-size: cover; /* или contain, в зависимости от вашего желания */
+    background-position: center; /* центрирование изображения */
 }
 
 
