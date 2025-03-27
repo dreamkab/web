@@ -8,22 +8,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
     <title>VaRion</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
     <div class="top">
-    <div class="top-main">
-        <div>
+        <div class="top-main">
+            <div>
             <img class="main_page_button-l" src="/images/main/logo_light.png" alt="logo light"/>
             <img class="button-light" src="/images/main/button_light.png" alt="button light"/>
-            <div class="header-content">
-                <div class="main_page_button">
-                    <img class="main_page_button" src="/images/main/logo.png" alt="logo"/>
-                </div>
+                <div class="header-content">
+                    <div class="main_page_button">
+                        <img class="main_page_button" src="/images/main/logo.png" alt="logo"/>
+                    </div>
                 <h1 class="main_header">ОТКРОЙ НОВУЮ РЕАЛЬНОСТЬ</h1>
                 <div class="blue-button">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <input type="checkbox" id="burger-toggle" class="burger-toggle">
+                    <label for="burger-toggle" class="burger-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <nav class="burger-nav">
+                        <ul>
+                            <li><a href="#">Рекомендации</a></li>
+                            <li><a href="#">Магазин</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
                 </div>
             </div>
         </div>
@@ -176,7 +189,6 @@
         </div>
 
     </div>
-
 
     <script src="/js/script.js"></script>
 </body>

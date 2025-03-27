@@ -81,15 +81,80 @@ html {
     }
 }
 
-.blue-button span {
-    height: 3px;
-    width: 24px;
-    border-radius: 20%;
-    background: #D3F2FD;
+.burger-toggle {
+    display: none;
+}
+
+.burger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+    z-index: 100;
+}
+
+.burger-btn span {
     display: block;
-    margin-top: 10px;
-    margin-left: 13px; 
-    margin-bottom: 4px;
+    width: 100%;
+    height: 3px;
+    background: #bfe4f3;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.burger-nav {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 250px;
+    height: 100vh;
+    background: #f8f8f8;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 999; /* Ниже кнопки, но выше остального контента */
+    padding-top: 60px;
+}
+
+.burger-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-nav li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.burger-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.burger-nav a:hover {
+    color: #007bff;
+}
+
+/* Анимация бургера и меню */
+.burger-toggle:checked ~ .burger-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-toggle:checked ~ .burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-toggle:checked ~ .burger-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.burger-toggle:checked ~ .burger-nav {
+    right: 100px
 }
 
 .button-light {
