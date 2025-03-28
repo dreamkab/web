@@ -792,9 +792,13 @@ textarea {
 .cart-sidebar {
     position: fixed;
     right: 20px;
-    top: 20px;
+    top: 300px;
     width: 300px;
     z-index: 1000;
+}
+
+.hidden {
+    display: none !important;
 }
 
 .cart {
