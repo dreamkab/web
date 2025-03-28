@@ -1,5 +1,7 @@
 html {
     background-color: #09040a;
+    
+    scroll-behavior: smooth;
 
     & span {
         font-family: "Tektur", serif;
@@ -108,11 +110,12 @@ html {
 
 .burger-nav {
     position: fixed;
+    border-top-left-radius: 40px;
     top: 0;
     right: -400px;
-    width: 250px;
-    height: 100vh;
-    background: #f8f8f8;
+    width: 200px;
+    height: 215px;
+    background: #c9c5ffa1;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease;
     z-index: 999; /* Ниже кнопки, но выше остального контента */
@@ -131,13 +134,18 @@ html {
 }
 
 .burger-nav a {
+    font-family: "Tektur", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
     text-decoration: none;
-    color: #333;
+    color: #c3a7e7;
+    text-shadow: #351f70 1px 0 10px;
     font-size: 18px;
 }
 
 .burger-nav a:hover {
-    color: #007bff;
+    color: #ac97e6;
 }
 
 /* Анимация бургера и меню */
@@ -154,7 +162,7 @@ html {
 }
 
 .burger-toggle:checked ~ .burger-nav {
-    right: 100px
+    right: 50px
 }
 
 .button-light {
@@ -199,11 +207,11 @@ html {
     margin-top: 20px;
 }
 
-.recomendations {
+.recomendations-games {
     background: #09040a;
     display: flex;
-    margin-top: 40px;
-    height: 420px;
+    /* margin-top: 40px; */
+    height: 360px;
 }
 
 /*BEAT SABER*/
@@ -316,6 +324,119 @@ html {
     height: 224.5px;
     margin-top: 15px;
     background: linear-gradient(to bottom, transparent, #09040a), url(/images/recomendations/job_sim_screenshot.png);
+    background-size: cover; /* или contain, в зависимости от вашего желания */
+    background-position: center; /* центрирование изображения */
+}
+
+.recomendations-obor {
+    background: #09040a;
+    display: flex;
+    height: 450px;
+}
+.oculus-box {
+    position: relative;
+    display: inline-block;
+    margin-left: 140px;
+    width: 500px;
+}
+.oculus-logo-box {
+    display: flex;
+}
+.oculus-logo-box p {
+    font-size: 38px;
+    margin: 5px;
+    font-family: "Tektur", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color: #e9c6ec;
+}
+.ob-oculus {
+    position: relative;
+    font-size: 30px;
+    font-family: "Tektur", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    z-index: 11;
+    top: -100px;
+    width: 380px;
+    color: #F6DEFF;
+}
+.oculus-p{
+    position: relative;
+    margin-right: 800px;
+    font-family: "Tektur", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    z-index: 11;
+    position: relative;
+    top: -90px;
+    width: 400px;
+    color: #E3F8FF;
+}
+
+.oculus-img {
+    border-radius: 20px;
+    width: 400px;
+    height: 224.5px;
+    margin-top: 15px;
+    background: linear-gradient(to bottom, transparent, 60%, #09040a), url(/images/recomendations/VR-headset_occulus_2.jpg);
+    background-size: cover; /* или contain, в зависимости от вашего желания */
+    background-position: center; /* центрирование изображения */
+}
+
+.hp-box {
+    position: relative;
+    display: inline-block;
+    margin-left: 120px;
+    width: 500px;
+}
+.hp-logo-box {
+    display: flex;
+}
+.hp-logo-box p {
+    font-size: 38px;
+    margin: 5px;
+    font-family: "Tektur", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color: #e9c6ec;
+}
+.ob-hp {
+    position: relative;
+    font-size: 30px;
+    font-family: "Tektur", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    z-index: 11;
+    top: -100px;
+    width: 400px;
+    color: #F6DEFF;
+}
+.hp-p{
+    position: relative;
+    margin-right: 800px;
+    font-family: "Tektur", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    z-index: 11;
+    position: relative;
+    top: -90px;
+    width: 400px;
+    color: #E3F8FF;
+}
+
+.hp-img {
+    border-radius: 20px;
+    width: 400px;
+    height: 224.5px;
+    margin-top: 15px;
+    background: linear-gradient(to bottom, transparent, 60%, #09040a), url(/images/recomendations/hp-reverb-g2-omnicept-edition-11-1.jpg);
     background-size: cover; /* или contain, в зависимости от вашего желания */
     background-position: center; /* центрирование изображения */
 }
@@ -483,4 +604,309 @@ html {
     & .like {
         width: 22%;
     }
+}
+
+.delivery {
+    background: white;
+    display: flex;
+
+    & h1 {
+        font-family: "Tektur", serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    & label  {
+        font-family: "Tektur", serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    & button {
+        font-family: "Tektur", serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    & input {
+        font-family: "Tektur", serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+}
+
+.delivery-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(158, 92, 172, 0.1);
+
+    & h1 {
+        text-align: center;
+        color: #64246d;
+        margin-bottom: 30px;
+    }
+
+    & label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+}
+
+.delivery-type-selector {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ecc9e9;
+}
+
+.delivery-type-btn {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ecc9e9;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.delivery-type-btn.active {
+    color: #db91d5;
+    border-bottom: 3px solid #db91d5;
+    font-weight: bold;
+}
+
+.delivery-form {
+    transition: all 0.3s;
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+    & select {
+        font-family: "Tektur", serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    & option {
+        font-family: "Tektur", serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-btn {
+    background-color: #db91d5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #eeb4e9;
+}
+
+.success-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.success-message h2 {
+    color: #2e7d32;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    border-color: #e74c3c;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .delivery-container {
+        padding: 20px;
+    }
+    
+    .delivery-type-selector {
+        flex-direction: column;
+    }
+    
+    .delivery-type-btn {
+        text-align: center;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+    
+    .delivery-type-btn.active {
+        border-bottom: none;
+        border-left: 3px solid #db34d3;
+    }
+}
+
+/* Стили для корзины */
+.cart-sidebar {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.cart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.cart h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.cart-item-quantity button {
+    background: #f1f1f1;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.cart-item-quantity span {
+    margin: 0 10px;
+}
+
+.cart-item-remove {
+    color: #e74c3c;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+    line-height: 1;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px 0;
+    padding-top: 10px;
+    border-top: 2px solid #eee;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .cart-sidebar {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Анимация добавления в корзину */
+@keyframes addedToCart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.added {
+    animation: addedToCart 0.5s ease;
 }

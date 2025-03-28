@@ -30,10 +30,10 @@
                     </label>
                     <nav class="burger-nav">
                         <ul>
-                            <li><a href="#">Рекомендации</a></li>
-                            <li><a href="#">Магазин</a></li>
-                            <li><a href="#">Доставка</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#recomendations">Рекомендации</a></li>
+                            <li><a href="#shop">Магазин</a></li>
+                            <li><a href="#delivery">Доставка</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -44,13 +44,13 @@
     </div>
     </div>
 
-    <h2 class="rec-header">Рекомендации начинающим</h2>
+    <h2 class="rec-header" id="recomendations">Рекомендации начинающим</h2>
             <p class="rec-desk">
             Если вы стали интересоваться VR играми, 
             но не знаете какое оборудование стоит взять или с каких игр начать,  
             то у нас есть небольшая подборка того, что вам нужно
             </p>
-        <div class="recomendations">
+    <div class="recomendations-games">
             <div class="beat-saber-box">
                 <div class="beat-saber-logo-box">
                     <img class="bs-logo" src="/images/recomendations/logo_beat_saber.png" alt="beat saber logo"/>
@@ -74,8 +74,31 @@
                     что значило "работа".</div>
             </div>
     </div>
+    <div class="recomendations-obor">
+        <div class="oculus-box">
+            <div class="oculus-logo-box">
+                <p>Oculus Meta Quest 2</p>
+            </div>
+            <div class="oculus-img"></div>
+            <div class="ob-oculus">О гарнитуре</div>
+            <div class="oculus-p">Система виртуальной реальности Meta Quest 2 KW49CM* выполнена в корпусе белого цвета. 
+                Шлем со 128 ГБ встроенной памяти работает на платформе Qualcomm Snapdragon XR2. 
+                Вместе с ОЗУ на 6 ГБ это гарантирует стабильную производительность.</div>
+        </div>
+        <div class="hp-box">
+            <div class="hp-logo-box">
+                <p>HP Reverb G2</p>
+            </div>
+            <div class="hp-img"></div>
+            <div class="ob-hp">О гарнитуре</div>
+            <div class="hp-p">Система виртуальной реальности HP Reverb G2 состоит из шлема и двух контроллеров, адаптера питания и кабеля подключения. 
+                Благодаря наушникам и набору встроенных датчиков вы ощутите полное погружение и непередаваемые эмоции. 
+                Шлем HP Reverb G2 обеспечивает разрешение дисплеев каждого глаза 2160x2160 dpi, а действует с частотой обновления 90 Гц. </div>
+        </div>
+</div>
 
-    <div class="shop">
+
+    <div class="shop" id="shop">
         <h7 class="shop-header">Магазин</h7>
 
         <div class="items">
@@ -187,7 +210,107 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="delivery" id="delivery">
+        <div class="delivery-container">
+        <h1>Оформление доставки</h1>
+        
+        <div class="delivery-type-selector">
+            <button id="physicalDeliveryBtn" class="delivery-type-btn active">Доставка по адресу</button>
+            <button id="accountDeliveryBtn" class="delivery-type-btn">Доставка на игровой аккаунт</button>
+        </div>
+        
+        <!-- Форма для физической доставки -->
+        <form id="physicalDeliveryForm" class="delivery-form">
+            <div class="form-group">
+                <label for="name">ФИО:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Адрес доставки:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="deliveryDate">Дата доставки:</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Оформить доставку</button>
+            </div>
+        </form>
+        
+        <!-- Форма для доставки на игровой аккаунт -->
+        <form id="accountDeliveryForm" class="delivery-form hidden">
+            <div class="form-group">
+                <label for="gameAccountEmail">Email аккаунта:</label>
+                <input type="email" id="gameAccountEmail" name="gameAccountEmail" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="gamePlatform">Игровая платформа:</label>
+                <select id="gamePlatform" name="gamePlatform" required>
+                    <option value="">Выберите платформу</option>
+                    <option value="steam">Steam</option>
+                    <option value="origin">Origin</option>
+                    <option value="epic">Epic Games</option>
+                    <option value="xbox">Xbox Live</option>
+                    <option value="psn">PlayStation Network</option>
+                    <option value="nintendo">Nintendo eShop</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="gameAccountId">ID аккаунта/Nickname:</label>
+                <input type="text" id="gameAccountId" name="gameAccountId" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="gameName">Название игры:</label>
+                <input type="text" id="gameName" name="gameName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="gameEdition">Редакция игры:</label>
+                <input type="text" id="gameEdition" name="gameEdition">
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Оформить доставку</button>
+            </div>
+        </form>
+        
+        <div id="successMessage" class="success-message hidden">
+            <h2>Спасибо за заказ!</h2>
+            <p id="successDetails">Ваша доставка успешно оформлена.</p>
+            <button id="newOrderBtn" class="submit-btn">Новый заказ</button>
+        </div>   
+        </div>
+        <div class="cart-sidebar">
+            <div class="cart">
+                <h2>Корзина</h2>
+                <div class="cart-items" id="cartItems">
+                    <div class="empty-cart">Корзина пуста</div>
+                </div>
+                <div class="cart-total">
+                    <span>Итого:</span>
+                    <span id="cartTotal">0 ₽</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="/js/script.js"></script>
