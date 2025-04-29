@@ -319,3 +319,43 @@ document.addEventListener('DOMContentLoaded', () => {
     OrderForms.init();
     Cart.init();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.shop-slider');
+    const slides = document.querySelectorAll('.slider-page');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dots = document.querySelectorAll('.dot');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Обновляем активные точки
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+    
+    // Переход к следующему слайду
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    });
+    
+    // Переход к предыдущему слайду
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    });
+    
+    // Переход по клику на точки
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            updateSlider();
+        });
+    });
+});
